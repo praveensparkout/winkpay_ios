@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WinkPay_Example' do
+  pod 'WinkPay', :path => '../'
+
+  target 'WinkPay_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
