@@ -21,22 +21,27 @@ open class WinkPay: NSObject {
     /// Singleton
     public static var shared: WinkPay!
     
-    var appWindow: UIWindow
     var clientId: String
     var userId: String
     
     var podType: PodType = .withUI
             
-    private init(with appWindow: UIWindow, userId: String, clientId: String) {
-        self.appWindow = appWindow
+    private init(userId: String, clientId: String) {
         self.userId = userId
         self.clientId = clientId
     }
     
     public class func initialize(with appWindow: UIWindow, userId: String, clientId: String) {
         if shared != nil { /* Do Cleanup's before initializing */ }
-        shared = WinkPay(with: appWindow, userId: userId, clientId: clientId)
+        shared = WinkPay(userId: userId, clientId: clientId)
+        WinkPayViewRouter.shared.holdAppWindow(appWindow)
     }
     
-    deinit {}
+    public func presentManager() {
+        WinkPayViewRouter.shared.initializeWinkPayView()
+    }
+    
+    deinit {
+        logWarning("\(logTag) ♻️ De-Inited")
+    }
 }

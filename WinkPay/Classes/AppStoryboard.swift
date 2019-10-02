@@ -29,7 +29,8 @@ extension UIViewController: StoryboardIdentifiable {
 enum AppStoryboard: String {
     
     //Tabs
-    case main = "winkPayDashboard"
+    case winkPay = "winkPay"
+    case dashboard = "winkPayDashboard"
     
     var storyboard: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Helper.getBundle())
@@ -85,7 +86,7 @@ enum SBIdentifier: String {
     }
     
     var viewController: UIViewController {
-        let storyboard = UIStoryboard(name: AppStoryboard.main.rawValue, bundle:nil)
+        let storyboard = UIStoryboard(name: AppStoryboard.winkPay.rawValue, bundle:nil)
         return storyboard.instantiateViewController(withIdentifier: self.rawValue)
     }
 }

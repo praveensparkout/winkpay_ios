@@ -7,17 +7,17 @@
 //
 
 import UIKit
+import WinkPay
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let appWindow = appDelegate.window else { return }
+        WinkPay.initialize(with: appWindow, userId: "sathish9042837275", clientId: "qwertyuiop")
+        WinkPay.shared.presentManager()
     }
 
 }

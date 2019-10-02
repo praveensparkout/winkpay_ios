@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: Helper
 struct Helper {
     
     static let sdkName: String = "WinkPay"
@@ -36,7 +37,6 @@ enum WinkPayError: Error {
         }
     }
 }
-
 
 /// ERROR Log Messages
 public func logMessage(_ string: String, canLog: Bool = true) {
