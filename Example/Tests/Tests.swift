@@ -1,5 +1,4 @@
 import XCTest
-import WinkPay
 
 class Tests: XCTestCase {
     

@@ -1,0 +1,6 @@
+framework module Pods_WinkPay_Tests {
+  umbrella header "Pods-WinkPay_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

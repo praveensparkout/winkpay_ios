@@ -1,0 +1,42 @@
+{
+  "name": "WinkPay",
+  "version": "0.1.0",
+  "summary": "A short description of WinkPay.",
+  "description": "The Payment Wallet",
+  "homepage": "https://github.com/sathishvgs/WinkPay",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sathishvgs": "vgsathish1995@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/sathishvgs/WinkPay.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "4.0",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "WinkPay/Classes/**/*.{swift}",
+  "resources": "AwBusinessLine/Classes/**/*.{xib}",
+  "resource_bundles": {
+    "WinkPay": [
+      "WinkPay/Classes/**/*.{storyboard,ttf}",
+      "WinkPay/Assets/**/*.{xcassets}"
+    ]
+  },
+  "dependencies": {
+    "PromiseKit": [
+      "~> 6.0"
+    ],
+    "Moya": [
+
+    ],
+    "SwiftyJSON": [
+
+    ]
+  },
+  "swift_version": "4.0"
+}
