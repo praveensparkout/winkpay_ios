@@ -81,3 +81,10 @@ extension UIView {
         }, completion: completion)
     }
 }
+
+struct WinkImage {
+    static func getImage(named: String) -> UIImage? {
+        let bundle: Bundle? = Helper.getBundle()
+        return UIImage(named: named, in: bundle, compatibleWith: nil)
+    }
+}

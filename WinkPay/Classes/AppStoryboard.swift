@@ -30,7 +30,11 @@ enum AppStoryboard: String {
     
     //Tabs
     case winkPay = "winkPay"
-    case dashboard = "winkPayDashboard"
+    case dashboard = "dashboard"
+    case send = "send"
+    case receive = "Receive"
+    case add = "Add"
+    case withdraw = "withdraw"
     
     var storyboard: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Helper.getBundle())

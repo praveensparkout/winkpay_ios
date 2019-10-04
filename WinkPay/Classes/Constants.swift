@@ -66,3 +66,10 @@ public func logError(_ string: String) {
 public func SwiftAssertIsOnMainThread(_ function: String) {
     assert(Thread.isMainThread, "\(function) not on main thread")
 }
+
+/// App Color
+
+struct AppColor {
+    
+    static let tintColor = UIColor(rawRGBValue: 116, green: 41, blue: 214, alpha: 1)
+}

@@ -89,11 +89,17 @@
 		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD70D7454E130316166E914AF6D974 /* TaskDelegate.swift */; };
 		B593B56495A204E756BAA753BA2D6E9C /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED1CF33C71215AEA8FDED618902444 /* Deprecations.swift */; };
 		B758241FBF6592EFBE6283378D16F9FD /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646AA4E81A97B1A0271703054D28164 /* NSObject+Promise.swift */; };
+		B860260F2346F506008F62EF /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B860260E2346F506008F62EF /* Common.xcassets */; };
+		B8654F7123466D07001F2701 /* dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7023466D07001F2701 /* dashboard.storyboard */; };
+		B8654F7523466E3B001F2701 /* send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7423466E3B001F2701 /* send.storyboard */; };
+		B8654F7723466ED3001F2701 /* Receive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7623466ED3001F2701 /* Receive.storyboard */; };
+		B8654F7923466EFF001F2701 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7823466EFF001F2701 /* Add.storyboard */; };
+		B8654F7B23466F70001F2701 /* withdraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7A23466F70001F2701 /* withdraw.storyboard */; };
 		B870B1352344D92C0047E7F5 /* WinkPayViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870B1342344D92C0047E7F5 /* WinkPayViewRouter.swift */; };
 		B870B1372344DE370047E7F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870B1362344DE370047E7F5 /* Extensions.swift */; };
 		B870B1392344E1490047E7F5 /* winkPay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B870B1382344E1490047E7F5 /* winkPay.storyboard */; };
 		B870B13B2344E34D0047E7F5 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870B13A2344E34D0047E7F5 /* BaseTabBarController.swift */; };
-		BB954F808703BEFFDC118DC631B2EAC0 /* winkPayDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60044D1E376E51A0F43A06302B32E498 /* winkPayDashboard.storyboard */; };
+		B8D598052347BEAE00D373A8 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D598042347BEAE00D373A8 /* SendViewController.swift */; };
 		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0F83DA7291CF7BA5B1550197C168D0 /* Alamofire.swift */; };
 		C3A56E1A33D374008FB33526CE9D9767 /* WinkPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57509D323A2DB59A4D510DADCA396988 /* WinkPay.bundle */; };
 		C3E48E7E030D177900C72A2C4B99825C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174AE7A6DFD5D4218395B5433CEA97DA /* Foundation.framework */; };
@@ -297,7 +303,6 @@
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E915FAF946FD2E05BECF4B2DBF6C9A8 /* Pods-WinkPay_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WinkPay_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5EE865F950D78C3414F84DD6EF2772F8 /* UIViewController+AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AnyPromise.m"; path = "Extensions/UIKit/Sources/UIViewController+AnyPromise.m"; sourceTree = "<group>"; };
-		60044D1E376E51A0F43A06302B32E498 /* winkPayDashboard.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = winkPayDashboard.storyboard; path = WinkPay/Classes/winkPayDashboard.storyboard; sourceTree = "<group>"; };
 		6052BA8556015E2B8C8BC4EDA70EDFCE /* Pods_WinkPay_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WinkPay_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61904165E5B1AF6BDC1D08063B435CDE /* MoyaProvider+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProvider+Internal.swift"; path = "Sources/Moya/MoyaProvider+Internal.swift"; sourceTree = "<group>"; };
 		630A47E647BB2D5BF00FEEAD88FC278D /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
@@ -359,10 +364,17 @@
 		B697334F72D40DB7A61B37F0DF4FB19B /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		B705CAB935C8615AC285ACEE10C6ED76 /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plugin.swift; path = Sources/Moya/Plugin.swift; sourceTree = "<group>"; };
 		B7456B5BBA471A51CF6CCD37668816B5 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		B860260E2346F506008F62EF /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Common.xcassets; path = WinkPay/Assets/Common.xcassets; sourceTree = "<group>"; };
+		B8654F7023466D07001F2701 /* dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = dashboard.storyboard; path = WinkPay/Classes/dashboard.storyboard; sourceTree = "<group>"; };
+		B8654F7423466E3B001F2701 /* send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = send.storyboard; path = WinkPay/Classes/send.storyboard; sourceTree = "<group>"; };
+		B8654F7623466ED3001F2701 /* Receive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Receive.storyboard; path = WinkPay/Classes/Receive.storyboard; sourceTree = "<group>"; };
+		B8654F7823466EFF001F2701 /* Add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Add.storyboard; path = WinkPay/Classes/Add.storyboard; sourceTree = "<group>"; };
+		B8654F7A23466F70001F2701 /* withdraw.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = withdraw.storyboard; path = WinkPay/Classes/withdraw.storyboard; sourceTree = "<group>"; };
 		B870B1342344D92C0047E7F5 /* WinkPayViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WinkPayViewRouter.swift; path = WinkPay/Classes/WinkPayViewRouter.swift; sourceTree = "<group>"; };
 		B870B1362344DE370047E7F5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = WinkPay/Classes/Extensions.swift; sourceTree = "<group>"; };
 		B870B1382344E1490047E7F5 /* winkPay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = winkPay.storyboard; path = WinkPay/Classes/winkPay.storyboard; sourceTree = "<group>"; };
 		B870B13A2344E34D0047E7F5 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTabBarController.swift; path = WinkPay/Classes/BaseTabBarController.swift; sourceTree = "<group>"; };
+		B8D598042347BEAE00D373A8 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendViewController.swift; path = WinkPay/Classes/SendViewController.swift; sourceTree = "<group>"; };
 		BA9D1BAC4BC60F91951DD1020A830F3F /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		BABB5005833B458F8D9C71289D32A73A /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
 		BB0F83DA7291CF7BA5B1550197C168D0 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
@@ -667,8 +679,13 @@
 		6D2005BF1ECE4E403DED5A31B8103D37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				60044D1E376E51A0F43A06302B32E498 /* winkPayDashboard.storyboard */,
 				B870B1382344E1490047E7F5 /* winkPay.storyboard */,
+				B8654F7A23466F70001F2701 /* withdraw.storyboard */,
+				B8654F7823466EFF001F2701 /* Add.storyboard */,
+				B8654F7623466ED3001F2701 /* Receive.storyboard */,
+				B8654F7423466E3B001F2701 /* send.storyboard */,
+				B8654F7023466D07001F2701 /* dashboard.storyboard */,
+				B860260E2346F506008F62EF /* Common.xcassets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -801,6 +818,7 @@
 				CAFC1054BAD551461050D668744F473B /* WinkPay.swift */,
 				B870B1342344D92C0047E7F5 /* WinkPayViewRouter.swift */,
 				B870B13A2344E34D0047E7F5 /* BaseTabBarController.swift */,
+				B8D598042347BEAE00D373A8 /* SendViewController.swift */,
 				B870B1362344DE370047E7F5 /* Extensions.swift */,
 				0F65F056D237F4DA3C2C33650E6225CC /* Pod */,
 				6D2005BF1ECE4E403DED5A31B8103D37 /* Resources */,
@@ -1217,8 +1235,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8654F7723466ED3001F2701 /* Receive.storyboard in Resources */,
 				B870B1392344E1490047E7F5 /* winkPay.storyboard in Resources */,
-				BB954F808703BEFFDC118DC631B2EAC0 /* winkPayDashboard.storyboard in Resources */,
+				B860260F2346F506008F62EF /* Common.xcassets in Resources */,
+				B8654F7923466EFF001F2701 /* Add.storyboard in Resources */,
+				B8654F7123466D07001F2701 /* dashboard.storyboard in Resources */,
+				B8654F7B23466F70001F2701 /* withdraw.storyboard in Resources */,
+				B8654F7523466E3B001F2701 /* send.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1402,6 +1425,7 @@
 				B870B1352344D92C0047E7F5 /* WinkPayViewRouter.swift in Sources */,
 				1FDDD69CD887C3DA5C23487E12514784 /* Constants.swift in Sources */,
 				E5FC291E2F40A15DCAEB58905E15F128 /* WinkPay-dummy.m in Sources */,
+				B8D598052347BEAE00D373A8 /* SendViewController.swift in Sources */,
 				D3186D8BE99A0D315E32FCF1DA96B599 /* WinkPay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
