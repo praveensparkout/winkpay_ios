@@ -122,7 +122,63 @@ class DashboardViewController: UIViewController {
     
     fileprivate let logTag = "[DashboardViewController]➤"
     
+    fileprivate var configurator: DashboardConfigurator = DashboardConfiguratorImplementation()
+    fileprivate var presenter: DashboardPresenter!
+    
     override func viewDidLoad() {
         logMessage("\(logTag) \(#function)")
+        configurator.configure(dashboardVC: self)
+    }
+}
+
+extension DashboardViewController: DashboardView {
+    
+}
+
+// MARK: Update View Related things from presenter
+protocol DashboardView {
+    
+}
+
+// MARK: Dashboard Configuration [Presenter & Router]
+protocol DashboardConfigurator {
+    func configure(dashboardVC: DashboardViewController)
+}
+
+class DashboardConfiguratorImplementation: DashboardConfigurator {
+    
+    func configure(dashboardVC: DashboardViewController) {
+        let router = DashboardViewRouterImplementation(dashboardVC: dashboardVC)
+        let presenter = DashboardPresenterImplementation(dashboardView: dashboardVC, router: router)
+        dashboardVC.presenter = presenter
+    }
+}
+
+// MARK: Business Logic
+protocol DashboardPresenter {
+    
+}
+
+class DashboardPresenterImplementation: DashboardPresenter {
+    
+    let dashboardView: DashboardView
+    let router: DashboardViewRouter
+    
+    init(dashboardView: DashboardView, router: DashboardViewRouter) {
+        self.dashboardView = dashboardView
+        self.router = router
+    }
+}
+
+// MARK: ViewController Routing
+protocol DashboardViewRouter {
+}
+
+class DashboardViewRouterImplementation: DashboardViewRouter {
+    
+    var dashboardVC: DashboardViewController
+    
+    init(dashboardVC: DashboardViewController) {
+        self.dashboardVC = dashboardVC
     }
 }

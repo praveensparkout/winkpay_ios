@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -13,25 +13,50 @@
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" id="sRJ-cG-ctt" customClass="DashboardViewController" customModule="WinkPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3GP-bx-BGS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-fJ-37R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-SC-5hj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                                        <color key="backgroundColor" red="0.4549019608" green="0.16078431369999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="187" id="jrc-se-uF3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ecL-SC-5hj" firstAttribute="leading" secondItem="IVe-fJ-37R" secondAttribute="leading" id="2w9-DD-Z22"/>
+                                    <constraint firstItem="ecL-SC-5hj" firstAttribute="top" secondItem="IVe-fJ-37R" secondAttribute="top" id="9bK-eh-3D7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ecL-SC-5hj" secondAttribute="trailing" id="Tjg-NI-5oJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IVe-fJ-37R" firstAttribute="top" secondItem="3GP-bx-BGS" secondAttribute="top" id="UAJ-WB-Wri"/>
+                            <constraint firstItem="YM4-xI-VUI" firstAttribute="trailing" secondItem="IVe-fJ-37R" secondAttribute="trailing" id="p3k-aB-nYN"/>
+                            <constraint firstAttribute="bottom" secondItem="IVe-fJ-37R" secondAttribute="bottom" id="p7l-20-7cM"/>
+                            <constraint firstItem="IVe-fJ-37R" firstAttribute="leading" secondItem="YM4-xI-VUI" secondAttribute="leading" id="sgD-vc-DSe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YM4-xI-VUI"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mhc-vb-AqH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6S-21-tsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="-252"/>
+            <point key="canvasLocation" x="2037.68115942029" y="-252.45535714285714"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="qhp-Jp-Em7">
             <objects>
-                <navigationController storyboardIdentifier="DashboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="12c-jj-qME" customClass="DashboardNavigationController" customModule="WinkPay" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DashboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="12c-jj-qME" customClass="DashboardNavigationController" customModule="WinkPay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 1" id="dpg-pH-Imv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z2c-QQ-Dtm">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

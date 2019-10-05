@@ -10,9 +10,8 @@
         <!--Base Navigation Controller-->
         <scene sceneID="Dhz-vV-NkM">
             <objects>
-                <navigationController storyboardIdentifier="BaseNavigationController" id="qpj-J7-n1p" customClass="BaseNavigationController" customModule="WinkPay" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BaseNavigationController" navigationBarHidden="YES" id="qpj-J7-n1p" customClass="BaseNavigationController" customModule="WinkPay" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PCJ-xx-Ebm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
