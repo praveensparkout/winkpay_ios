@@ -21,9 +21,113 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-SC-5hj">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWL-WO-xaf">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="Ugb-PJ-lLl"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balance_more_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-hf-0Vj">
+                                                <rect key="frame" x="18" y="25" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="22" id="PrM-W8-FDH"/>
+                                                    <constraint firstAttribute="height" constant="22" id="TCf-eN-dwl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balance_notify_icon" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-e2-I4R">
+                                                <rect key="frame" x="336" y="25" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="3hB-9d-gSe"/>
+                                                    <constraint firstAttribute="width" constant="22" id="G3g-qC-vyM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7C7-r8-pd3" userLabel="Notify Button">
+                                                <rect key="frame" x="325" y="10" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="NYj-re-W8y"/>
+                                                    <constraint firstAttribute="width" constant="45" id="R1i-6l-isZ"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="didTapNotifyBttn:" destination="sRJ-cG-ctt" eventType="touchUpInside" id="hxn-sR-DfF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuE-WH-mm6" userLabel="More Button">
+                                                <rect key="frame" x="5" y="10" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="a75-ws-gew"/>
+                                                    <constraint firstAttribute="width" constant="45" id="d5D-Dw-E32"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="didTapMoreBttn:" destination="sRJ-cG-ctt" eventType="touchUpInside" id="Us2-eh-07k"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-6T-ntM">
+                                                <rect key="frame" x="0.0" y="63" width="375" height="97"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-F4-uvK">
+                                                        <rect key="frame" x="27" y="0.0" width="150" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="U5z-Ys-t32"/>
+                                                            <constraint firstAttribute="width" constant="150" id="YGF-rj-P0F"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXW-mE-5mB">
+                                                        <rect key="frame" x="273" y="0.0" width="75" height="33"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="6n6-rW-ykY"/>
+                                                            <constraint firstAttribute="height" constant="33" id="9TT-ON-5VO"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Add" image="balance_add_icon">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapAddBttn:" destination="sRJ-cG-ctt" eventType="touchUpInside" id="us5-JE-re6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1500.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dP-7K-IJH">
+                                                        <rect key="frame" x="27" y="29" width="298" height="63"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="6dP-7K-IJH" firstAttribute="top" secondItem="Ycg-F4-uvK" secondAttribute="bottom" constant="5" id="5Us-41-phQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MXW-mE-5mB" secondAttribute="trailing" constant="27" id="62i-x5-nzh"/>
+                                                    <constraint firstItem="6dP-7K-IJH" firstAttribute="leading" secondItem="GSW-6T-ntM" secondAttribute="leading" constant="27" id="GDZ-90-7Ft"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6dP-7K-IJH" secondAttribute="trailing" constant="50" id="LEP-Hk-8g6"/>
+                                                    <constraint firstItem="Ycg-F4-uvK" firstAttribute="top" secondItem="GSW-6T-ntM" secondAttribute="top" id="QZq-L9-6dS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6dP-7K-IJH" secondAttribute="bottom" constant="5" id="Qyp-gJ-RMF"/>
+                                                    <constraint firstItem="MXW-mE-5mB" firstAttribute="top" secondItem="GSW-6T-ntM" secondAttribute="top" id="Sc3-ES-L5M"/>
+                                                    <constraint firstItem="Ycg-F4-uvK" firstAttribute="leading" secondItem="GSW-6T-ntM" secondAttribute="leading" constant="27" id="af0-DR-uLt"/>
+                                                    <constraint firstAttribute="height" constant="97" id="pkB-VA-bev"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.4549019608" green="0.16078431369999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5uV-e2-I4R" secondAttribute="trailing" constant="17" id="Ehk-1m-TkE"/>
+                                            <constraint firstItem="GSW-6T-ntM" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" id="GKJ-2H-TZj"/>
+                                            <constraint firstItem="SWL-WO-xaf" firstAttribute="top" secondItem="ecL-SC-5hj" secondAttribute="top" id="NAa-N3-Aeg"/>
+                                            <constraint firstItem="7C7-r8-pd3" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" constant="10" id="Nl9-9y-0s2"/>
+                                            <constraint firstItem="hZg-hf-0Vj" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" constant="18" id="Pty-CF-S40"/>
+                                            <constraint firstAttribute="trailing" secondItem="GSW-6T-ntM" secondAttribute="trailing" id="VXm-dw-GfK"/>
+                                            <constraint firstItem="SWL-WO-xaf" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" id="VbK-rI-E7v"/>
+                                            <constraint firstAttribute="trailing" secondItem="SWL-WO-xaf" secondAttribute="trailing" id="Xxg-Pg-HHo"/>
+                                            <constraint firstItem="nuE-WH-mm6" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" constant="5" id="b6A-eY-xaY"/>
+                                            <constraint firstItem="hZg-hf-0Vj" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" constant="25" id="dkn-RQ-dXR"/>
+                                            <constraint firstAttribute="trailing" secondItem="7C7-r8-pd3" secondAttribute="trailing" constant="5" id="e8R-fi-oM4"/>
+                                            <constraint firstItem="nuE-WH-mm6" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" constant="10" id="hS5-s1-Fky"/>
+                                            <constraint firstItem="5uV-e2-I4R" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" constant="25" id="hem-he-xiZ"/>
                                             <constraint firstAttribute="height" constant="187" id="jrc-se-uF3"/>
+                                            <constraint firstAttribute="bottom" secondItem="GSW-6T-ntM" secondAttribute="bottom" constant="27" id="t0L-nH-Mdm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -45,10 +149,16 @@
                         <viewLayoutGuide key="safeArea" id="YM4-xI-VUI"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mhc-vb-AqH"/>
+                    <connections>
+                        <outlet property="addButton" destination="MXW-mE-5mB" id="t5w-EX-Duu"/>
+                        <outlet property="balanceView" destination="ecL-SC-5hj" id="6d1-Bd-Bm0"/>
+                        <outlet property="balanceViewHtCons" destination="jrc-se-uF3" id="Rwk-4g-wHP"/>
+                        <outlet property="deviceTypeHtCons" destination="Ugb-PJ-lLl" id="e9Q-se-nMq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6S-21-tsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2037.68115942029" y="-252.45535714285714"/>
+            <point key="canvasLocation" x="2037.5999999999999" y="-253.2233883058471"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="qhp-Jp-Em7">
@@ -69,4 +179,9 @@
             <point key="canvasLocation" x="1176.8115942028987" y="-252.45535714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="balance_add_icon" width="12.5" height="12.5"/>
+        <image name="balance_more_icon" width="20.5" height="15.5"/>
+        <image name="balance_notify_icon" width="21" height="22.5"/>
+    </resources>
 </document>

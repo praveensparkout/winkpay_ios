@@ -120,6 +120,17 @@ class DashboardNavigationController: UINavigationController {
 // MARK: Dashboard ViewController
 class DashboardViewController: UIViewController {
     
+    @IBOutlet weak var balanceView: UIView!
+    @IBOutlet weak var addButton: UIButton! {
+        didSet {
+            self.addButton.addCorner(radius: 3)
+            self.addButton.addBorder(width: 1, color: .white)
+        }
+    }
+    
+    @IBOutlet weak var balanceViewHtCons: NSLayoutConstraint!
+    @IBOutlet weak var deviceTypeHtCons: NSLayoutConstraint!
+        
     fileprivate let logTag = "[DashboardViewController]➤"
     
     fileprivate var configurator: DashboardConfigurator = DashboardConfiguratorImplementation()
@@ -128,6 +139,28 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         logMessage("\(logTag) \(#function)")
         configurator.configure(dashboardVC: self)
+        self.configureView()
+    }
+    
+    @IBAction func didTapAddBttn(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func didTapMoreBttn(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func didTapNotifyBttn(_ sender: UIButton) {
+        
+    }
+    
+    
+    func configureView() {
+        
+        let balanceViewHt = UIScreen.main.bounds.height * 0.3
+        balanceViewHtCons.constant = balanceViewHt
+        balanceView.setGradientBackground(colors: [WinkColors.Dashboard.balanceG1, WinkColors.Dashboard.balanceG2], startPoint: .topLeft, endPoint: .bottomRight)
+        deviceTypeHtCons.constant = UIDevice().isXDevice ? 25 : 0
     }
 }
 
