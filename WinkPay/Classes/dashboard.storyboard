@@ -151,6 +151,8 @@
                     <navigationItem key="navigationItem" id="Mhc-vb-AqH"/>
                     <connections>
                         <outlet property="addButton" destination="MXW-mE-5mB" id="t5w-EX-Duu"/>
+                        <outlet property="availableBalance" destination="Ycg-F4-uvK" id="hGf-Mo-Qzd"/>
+                        <outlet property="balanceLbl" destination="6dP-7K-IJH" id="EpU-d9-ZnI"/>
                         <outlet property="balanceView" destination="ecL-SC-5hj" id="6d1-Bd-Bm0"/>
                         <outlet property="balanceViewHtCons" destination="jrc-se-uF3" id="Rwk-4g-wHP"/>
                         <outlet property="deviceTypeHtCons" destination="Ugb-PJ-lLl" id="e9Q-se-nMq"/>

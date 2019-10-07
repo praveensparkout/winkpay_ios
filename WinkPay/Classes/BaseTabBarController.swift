@@ -125,6 +125,19 @@ class DashboardViewController: UIViewController {
         didSet {
             self.addButton.addCorner(radius: 3)
             self.addButton.addBorder(width: 1, color: .white)
+            self.addButton.titleLabel?.font = AppFont.semiBold(size: 16)
+        }
+    }
+    
+    @IBOutlet weak var balanceLbl: UILabel! {
+        didSet {
+            balanceLbl.font = AppFont.semiBold(size: 46)
+        }
+    }
+    
+    @IBOutlet weak var availableBalance: UILabel! {
+        didSet {
+            availableBalance.font = AppFont.lightFont(size: 18)
         }
     }
     

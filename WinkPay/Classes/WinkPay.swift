@@ -35,6 +35,7 @@ open class WinkPay: NSObject {
         if shared != nil { /* Do Cleanup's before initializing */ }
         shared = WinkPay(userId: userId, clientId: clientId)
         WinkPayViewRouter.shared.holdAppWindow(appWindow)
+        Helper.registerFonts()
     }
     
     public func presentManager() {

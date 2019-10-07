@@ -89,6 +89,12 @@
 		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD70D7454E130316166E914AF6D974 /* TaskDelegate.swift */; };
 		B593B56495A204E756BAA753BA2D6E9C /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBED1CF33C71215AEA8FDED618902444 /* Deprecations.swift */; };
 		B758241FBF6592EFBE6283378D16F9FD /* NSObject+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646AA4E81A97B1A0271703054D28164 /* NSObject+Promise.swift */; };
+		B81B8BD3234AE80400EA738C /* WinkFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B8BD2234AE80400EA738C /* WinkFont.swift */; };
+		B81B8BE3234AE89400EA738C /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B81B8BDE234AE89400EA738C /* SourceSansPro-Bold.otf */; };
+		B81B8BE4234AE89400EA738C /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B81B8BDF234AE89400EA738C /* SourceSansPro-Regular.otf */; };
+		B81B8BE5234AE89400EA738C /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B81B8BE0234AE89400EA738C /* SourceSansPro-Light.otf */; };
+		B81B8BE6234AE89400EA738C /* SourceSansPro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B81B8BE1234AE89400EA738C /* SourceSansPro-ExtraLight.otf */; };
+		B81B8BE7234AE89400EA738C /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B81B8BE2234AE89400EA738C /* SourceSansPro-Semibold.otf */; };
 		B860260F2346F506008F62EF /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B860260E2346F506008F62EF /* Common.xcassets */; };
 		B8654F7123466D07001F2701 /* dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7023466D07001F2701 /* dashboard.storyboard */; };
 		B8654F7523466E3B001F2701 /* send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8654F7423466E3B001F2701 /* send.storyboard */; };
@@ -364,6 +370,12 @@
 		B697334F72D40DB7A61B37F0DF4FB19B /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		B705CAB935C8615AC285ACEE10C6ED76 /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plugin.swift; path = Sources/Moya/Plugin.swift; sourceTree = "<group>"; };
 		B7456B5BBA471A51CF6CCD37668816B5 /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		B81B8BD2234AE80400EA738C /* WinkFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WinkFont.swift; path = WinkPay/Classes/WinkFont.swift; sourceTree = "<group>"; };
+		B81B8BDE234AE89400EA738C /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Bold.otf"; path = "WinkPay/Classes/SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		B81B8BDF234AE89400EA738C /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Regular.otf"; path = "WinkPay/Classes/SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
+		B81B8BE0234AE89400EA738C /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Light.otf"; path = "WinkPay/Classes/SourceSansPro-Light.otf"; sourceTree = "<group>"; };
+		B81B8BE1234AE89400EA738C /* SourceSansPro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-ExtraLight.otf"; path = "WinkPay/Classes/SourceSansPro-ExtraLight.otf"; sourceTree = "<group>"; };
+		B81B8BE2234AE89400EA738C /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceSansPro-Semibold.otf"; path = "WinkPay/Classes/SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		B860260E2346F506008F62EF /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Common.xcassets; path = WinkPay/Assets/Common.xcassets; sourceTree = "<group>"; };
 		B8654F7023466D07001F2701 /* dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = dashboard.storyboard; path = WinkPay/Classes/dashboard.storyboard; sourceTree = "<group>"; };
 		B8654F7423466E3B001F2701 /* send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = send.storyboard; path = WinkPay/Classes/send.storyboard; sourceTree = "<group>"; };
@@ -679,6 +691,11 @@
 		6D2005BF1ECE4E403DED5A31B8103D37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B81B8BDE234AE89400EA738C /* SourceSansPro-Bold.otf */,
+				B81B8BE1234AE89400EA738C /* SourceSansPro-ExtraLight.otf */,
+				B81B8BE0234AE89400EA738C /* SourceSansPro-Light.otf */,
+				B81B8BDF234AE89400EA738C /* SourceSansPro-Regular.otf */,
+				B81B8BE2234AE89400EA738C /* SourceSansPro-Semibold.otf */,
 				B870B1382344E1490047E7F5 /* winkPay.storyboard */,
 				B8654F7A23466F70001F2701 /* withdraw.storyboard */,
 				B8654F7823466EFF001F2701 /* Add.storyboard */,
@@ -820,6 +837,7 @@
 				B870B13A2344E34D0047E7F5 /* BaseTabBarController.swift */,
 				B8D598042347BEAE00D373A8 /* SendViewController.swift */,
 				B870B1362344DE370047E7F5 /* Extensions.swift */,
+				B81B8BD2234AE80400EA738C /* WinkFont.swift */,
 				0F65F056D237F4DA3C2C33650E6225CC /* Pod */,
 				6D2005BF1ECE4E403DED5A31B8103D37 /* Resources */,
 				7EBA6ED948F547E6E9B7105166F5FA3F /* Support Files */,
@@ -1237,10 +1255,15 @@
 			files = (
 				B8654F7723466ED3001F2701 /* Receive.storyboard in Resources */,
 				B870B1392344E1490047E7F5 /* winkPay.storyboard in Resources */,
+				B81B8BE4234AE89400EA738C /* SourceSansPro-Regular.otf in Resources */,
+				B81B8BE3234AE89400EA738C /* SourceSansPro-Bold.otf in Resources */,
+				B81B8BE7234AE89400EA738C /* SourceSansPro-Semibold.otf in Resources */,
 				B860260F2346F506008F62EF /* Common.xcassets in Resources */,
 				B8654F7923466EFF001F2701 /* Add.storyboard in Resources */,
 				B8654F7123466D07001F2701 /* dashboard.storyboard in Resources */,
+				B81B8BE6234AE89400EA738C /* SourceSansPro-ExtraLight.otf in Resources */,
 				B8654F7B23466F70001F2701 /* withdraw.storyboard in Resources */,
+				B81B8BE5234AE89400EA738C /* SourceSansPro-Light.otf in Resources */,
 				B8654F7523466E3B001F2701 /* send.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1421,6 +1444,7 @@
 				EFC985CBA0923229C537E0CE59252BEA /* AppStoryboard.swift in Sources */,
 				B870B13B2344E34D0047E7F5 /* BaseTabBarController.swift in Sources */,
 				F922D2CE481A96102F921529DED2B61B /* BaseApiProvider.swift in Sources */,
+				B81B8BD3234AE80400EA738C /* WinkFont.swift in Sources */,
 				B870B1372344DE370047E7F5 /* Extensions.swift in Sources */,
 				B870B1352344D92C0047E7F5 /* WinkPayViewRouter.swift in Sources */,
 				1FDDD69CD887C3DA5C23487E12514784 /* Constants.swift in Sources */,

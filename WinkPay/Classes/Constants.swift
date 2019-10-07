@@ -7,6 +7,8 @@
 
 import Foundation
 
+let AppFontFamily: FontFamily = .sourcesanspro
+
 // MARK: Helper
 struct Helper {
     
@@ -25,6 +27,11 @@ struct Helper {
         let storyBoard: UIStoryboard = UIStoryboard(name: "WinkPay", bundle: Helper.getBundle()!)
         return storyBoard
     }
+    
+    static func registerFonts() {
+        UIFont().registerFonts()
+    }
+
 }
 
 /// ERROR Descriptions
