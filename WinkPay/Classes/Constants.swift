@@ -8,6 +8,7 @@
 import Foundation
 
 let AppFontFamily: FontFamily = .sourcesanspro
+let winkApiManager: WinkApiManager = WinkApiManager()
 
 // MARK: Helper
 struct Helper {
@@ -37,10 +38,12 @@ struct Helper {
 /// ERROR Descriptions
 enum WinkPayError: Error {
     case invaid
+    case emptyJSON
     
     var description: String {
         switch self {
         case .invaid: return "Invalid Data"
+        case .emptyJSON: return "Empty Response"
         }
     }
 }

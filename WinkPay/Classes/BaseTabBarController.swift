@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import PromiseKit
+import SwiftyJSON
 
 // MARK: Base Navigation Controller
 class BaseNavigationController: UINavigationController {
@@ -152,7 +154,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         logMessage("\(logTag) \(#function)")
         configurator.configure(dashboardVC: self)
-        self.configureView()
+        presenter.viewDidLoad()
     }
     
     @IBAction func didTapAddBttn(_ sender: UIButton) {
@@ -168,6 +170,10 @@ class DashboardViewController: UIViewController {
     }
     
     
+}
+
+extension DashboardViewController: DashboardView {
+    
     func configureView() {
         
         let balanceViewHt = UIScreen.main.bounds.height * 0.3
@@ -175,15 +181,67 @@ class DashboardViewController: UIViewController {
         balanceView.setGradientBackground(colors: [WinkColors.Dashboard.balanceG1, WinkColors.Dashboard.balanceG2], startPoint: .topLeft, endPoint: .bottomRight)
         deviceTypeHtCons.constant = UIDevice().isXDevice ? 25 : 0
     }
-}
-
-extension DashboardViewController: DashboardView {
     
+    func updateBalance(_ balance: Int) {
+        self.balanceLbl.text = "\(balance)"
+    }
 }
 
 // MARK: Update View Related things from presenter
 protocol DashboardView {
+    func configureView()
+    func updateBalance(_ balance: Int)
+}
+
+// MARK: Business Logic
+protocol DashboardPresenter {
+    func viewDidLoad()
+}
+
+class DashboardPresenterImplementation: DashboardPresenter {
     
+    let dashboardView: DashboardView
+    let router: DashboardViewRouter
+    
+    fileprivate let logTag = "[DashboardPresenterImplementation]➤"
+    
+    init(dashboardView: DashboardView, router: DashboardViewRouter) {
+        self.dashboardView = dashboardView
+        self.router = router
+    }
+    
+    func viewDidLoad() {
+        dashboardView.configureView()
+        fetchWalletBalance()
+    }
+        
+    func fetchWalletBalance() {
+        
+        firstly {
+            winkApiManager.fetchWalletBalance(clientId: WinkPay.shared.clientId, userId: WinkPay.shared.userId)
+        }.then { json in
+            self.getBalance(from: json)
+        }.done { balance in
+            self.dashboardView.updateBalance(balance)
+        }.catch { error in
+            logError("\(self.logTag) Fetch wallet balance Api Failed")
+        }
+    }
+    
+    func getBalance(from json: JSON) -> Promise<Int> {
+    
+        return Promise<Int> { promise in
+            guard json["status"].boolValue, let balanceList = json["data"].array else {
+                promise.reject(WinkPayError.emptyJSON)
+                return
+            }
+            var totalBalance = 0
+            for balance in balanceList {
+                totalBalance += balance["balance"].int ?? 0
+            }
+            promise.fulfill(totalBalance)
+        }
+    }
 }
 
 // MARK: Dashboard Configuration [Presenter & Router]
@@ -197,22 +255,6 @@ class DashboardConfiguratorImplementation: DashboardConfigurator {
         let router = DashboardViewRouterImplementation(dashboardVC: dashboardVC)
         let presenter = DashboardPresenterImplementation(dashboardView: dashboardVC, router: router)
         dashboardVC.presenter = presenter
-    }
-}
-
-// MARK: Business Logic
-protocol DashboardPresenter {
-    
-}
-
-class DashboardPresenterImplementation: DashboardPresenter {
-    
-    let dashboardView: DashboardView
-    let router: DashboardViewRouter
-    
-    init(dashboardView: DashboardView, router: DashboardViewRouter) {
-        self.dashboardView = dashboardView
-        self.router = router
     }
 }
 

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let appWindow = appDelegate.window else { return }
-        WinkPay.initialize(with: appWindow, userId: "sathish9042837275", clientId: "qwertyuiop")
+        WinkPay.initialize(with: appWindow, userId: "8056359277", clientId: "5d89e3953226963b24a5dbfe")
         WinkPay.shared.presentManager()
     }
 
