@@ -183,7 +183,7 @@ extension DashboardViewController: DashboardView {
     }
     
     func updateBalance(_ balance: Int) {
-        self.balanceLbl.text = "\(balance)"
+        self.balanceLbl.text = "$\(balance)"
     }
 }
 
@@ -231,14 +231,11 @@ class DashboardPresenterImplementation: DashboardPresenter {
     func getBalance(from json: JSON) -> Promise<Int> {
     
         return Promise<Int> { promise in
-            guard json["status"].boolValue, let balanceList = json["data"].array else {
+            guard json["status"].boolValue, json["data"] != JSON.null else {
                 promise.reject(WinkPayError.emptyJSON)
                 return
             }
-            var totalBalance = 0
-            for balance in balanceList {
-                totalBalance += balance["balance"].int ?? 0
-            }
+            let totalBalance = json["data"]["balance"].int ?? 0
             promise.fulfill(totalBalance)
         }
     }
