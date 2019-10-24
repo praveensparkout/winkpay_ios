@@ -39,11 +39,13 @@ struct Helper {
 enum WinkPayError: Error {
     case invaid
     case emptyJSON
+    case winkPayWindowNotFound
     
     var description: String {
         switch self {
         case .invaid: return "Invalid Data"
         case .emptyJSON: return "Empty Response"
+        case .winkPayWindowNotFound: return "WinkPay Window Not Found"
         }
     }
 }

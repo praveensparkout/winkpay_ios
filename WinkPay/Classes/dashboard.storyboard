@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +22,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecL-SC-5hj">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="W4u-LR-cMD">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWL-WO-xaf">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,10 +116,13 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.4549019608" green="0.16078431369999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="W4u-LR-cMD" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" id="15Z-Rg-vhk"/>
                                             <constraint firstAttribute="trailing" secondItem="5uV-e2-I4R" secondAttribute="trailing" constant="17" id="Ehk-1m-TkE"/>
                                             <constraint firstItem="GSW-6T-ntM" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" id="GKJ-2H-TZj"/>
+                                            <constraint firstAttribute="bottom" secondItem="W4u-LR-cMD" secondAttribute="bottom" id="Jrk-H3-XTt"/>
                                             <constraint firstItem="SWL-WO-xaf" firstAttribute="top" secondItem="ecL-SC-5hj" secondAttribute="top" id="NAa-N3-Aeg"/>
                                             <constraint firstItem="7C7-r8-pd3" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" constant="10" id="Nl9-9y-0s2"/>
+                                            <constraint firstAttribute="trailing" secondItem="W4u-LR-cMD" secondAttribute="trailing" id="PEO-Xf-fYI"/>
                                             <constraint firstItem="hZg-hf-0Vj" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" constant="18" id="Pty-CF-S40"/>
                                             <constraint firstAttribute="trailing" secondItem="GSW-6T-ntM" secondAttribute="trailing" id="VXm-dw-GfK"/>
                                             <constraint firstItem="SWL-WO-xaf" firstAttribute="leading" secondItem="ecL-SC-5hj" secondAttribute="leading" id="VbK-rI-E7v"/>
@@ -128,6 +134,7 @@
                                             <constraint firstItem="5uV-e2-I4R" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" constant="25" id="hem-he-xiZ"/>
                                             <constraint firstAttribute="height" constant="187" id="jrc-se-uF3"/>
                                             <constraint firstAttribute="bottom" secondItem="GSW-6T-ntM" secondAttribute="bottom" constant="27" id="t0L-nH-Mdm"/>
+                                            <constraint firstItem="W4u-LR-cMD" firstAttribute="top" secondItem="SWL-WO-xaf" secondAttribute="bottom" id="uQo-kC-NnJ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -185,5 +192,6 @@
         <image name="balance_add_icon" width="12.5" height="12.5"/>
         <image name="balance_more_icon" width="20.5" height="15.5"/>
         <image name="balance_notify_icon" width="21" height="22.5"/>
+        <image name="bg_dashboard" width="360" height="187"/>
     </resources>
 </document>

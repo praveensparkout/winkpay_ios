@@ -6,6 +6,6 @@ target 'WinkPay_Example' do
   target 'WinkPay_Tests' do
     inherit! :search_paths
 
-    
   end
 end
+

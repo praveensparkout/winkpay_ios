@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let appWindow = appDelegate.window else { return }
         WinkPay.initialize(with: appWindow, userId: "8056359277", clientId: "5d89e3953226963b24a5dbfe")
+    }
+    
+    @IBAction func tapHere(_ sender: Any) {
         WinkPay.shared.presentManager()
     }
 
